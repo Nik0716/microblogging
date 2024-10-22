@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumblr-Inspired Microblog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>TumbloClone</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search tags..." id="search-input">
+            </div>
+            <div class="nav-links">
+                <a href="#">Dashboard</a>
+                <a href="#">Explore</a>
+                <a href="#">Messages <span id="message-counter">2</span></a>
+                <a href="#">Notifications <span id="notification-counter">5</span></a>
+                <button id="dark-mode-toggle">🌙 Dark Mode</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post-creation">
+            <form id="post-form">
+                <div class="user-info">
+                    <img src="default-avatar.png" alt="Profile Picture" class="profile-pic">
+                    <input type="text" id="username" placeholder="Your Name" required>
+                </div>
+                <textarea id="post-content" placeholder="Share a thought..." required></textarea>
+                
+                <!-- Image Upload Input -->
+                <label for="post-image">Upload Image:</label>
+                <input type="file" id="post-image" accept="image/*">
+
+                <button type="submit">Post</button>
+            </form>
+        </section>
+
+        <section class="posts-feed">
+            <h2>Trending Posts</h2>
+            <div id="posts-list" class="grid-layout"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TumbloClone</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
